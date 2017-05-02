@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <SurfaceView
+        android:id="@+id/camera_show_view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+    <!--覆盖视频窗口-->
+<!--<ImageView-->
+    <!--android:background="#fff"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent" />-->
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/recordbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:onClick="record"
+            android:text="录制" />
+
+        <Button
+            android:id="@+id/stopbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/recordbutton"
+            android:layout_marginRight="30dp"
+            android:layout_toLeftOf="@id/recordbutton"
+            android:onClick="record"
+            android:text="停止" />
+        <Button
+            android:id="@+id/scanbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/recordbutton"
+            android:layout_marginRight="30dp"
+            android:layout_toLeftOf="@id/stopbutton"
+            android:onClick="scan"
+            android:text="scan" />
+    </RelativeLayout>
+
+</FrameLayout>
