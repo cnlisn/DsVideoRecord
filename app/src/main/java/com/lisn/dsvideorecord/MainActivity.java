@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         initScreen();
         setContentView(R.layout.activity_main);
         initView();
+        initCamera();
     }
 
     private void initView() {
@@ -63,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
                 mSurfaceHolder = holder;
-                initCamera();
+//                initCamera();
             }
 
             @Override
