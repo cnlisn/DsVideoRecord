@@ -167,6 +167,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void Stop() {
+        if (myCamera != null) {
+            myCamera.stopPreview();
+            myCamera.lock();
+            myCamera.release();
+            myCamera = null;
+        }
         if (mediaRecorder != null) {
             mediaRecorder.stop();
             mediaRecorder.release();
